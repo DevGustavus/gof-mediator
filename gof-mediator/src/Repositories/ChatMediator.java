@@ -1,4 +1,4 @@
-package Models;
+package Repositories;
 
 public interface ChatMediator {
 

@@ -1,10 +1,10 @@
 package Repositories;
 
-public abstract class User {
-    protected ChatMediator mediator;
+public abstract class Jornalist {
+    protected NewsMediator mediator;
     protected String name;
 
-    public User(ChatMediator mediator, String name) {
+    public Jornalist(NewsMediator mediator, String name) {
         this.mediator = mediator;
         this.name = name;
     }

@@ -1,15 +1,18 @@
 package Models;
 
-public class UserImpl extends User {
+import Repositories.Jornalist;
+import Repositories.NewsMediator;
 
-    public UserImpl(ChatMediator mediator, String name) {
+public class JornalistImpl extends Jornalist {
+
+    public JornalistImpl(NewsMediator mediator, String name) {
         super(mediator, name);
     }
 
     @Override
     public void send(String message) {
         System.out.println(this.name + ": Enviando mensagem = " + message);
-        mediator.sendMessage(message, this);
+        mediator.sendNews(message, this);
     }
 
     @Override

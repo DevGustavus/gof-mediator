@@ -1,19 +1,26 @@
+import Models.JornalistImpl;
+import Models.NewsMediatorImpl;
+import Repositories.Jornalist;
+import Repositories.NewsMediator;
+
 public class Main {
 
     public static void main(String[] args) {
-        ChatMediator mediator = new ChatMediatorImpl();
+        NewsMediator mediator = new NewsMediatorImpl();
 
-        User user1 = new UserImpl(mediator, "User1");
-        User user2 = new UserImpl(mediator, "User2");
-        User user3 = new UserImpl(mediator, "User3");
-        User user4 = new UserImpl(mediator, "User4");
+        Jornalist jornalist1 = new JornalistImpl(mediator, "Jornalist1");
+        Jornalist jornalist2 = new JornalistImpl(mediator, "Jornalist2");
+        Jornalist jornalist3 = new JornalistImpl(mediator, "Jornalist3");
+        Jornalist jornalist4 = new JornalistImpl(mediator, "Jornalist4");
 
-        mediator.addUser(user1);
-        mediator.addUser(user2);
-        mediator.addUser(user3);
-        mediator.addUser(user4);
+        mediator.addJornalist(jornalist1);
+        mediator.addJornalist(jornalist2);
+        mediator.addJornalist(jornalist3);
+        mediator.addJornalist(jornalist4);
 
-        user1.send("Oi pessoal!");
+        jornalist1.send("O governo perde popularidade!");
+        System.out.println("\n========================\n");
+        jornalist2.send("O governo ganha popularidade!");
     }
 
 }
